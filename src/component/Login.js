@@ -4,7 +4,7 @@ import { Card, CardTitle, CardText} from 'react-md';
 import { Button } from 'react-md';
 
 const style = { maxWidth: 320,marginTop:100 };
-const Login = ({userName,password,handleLogin,handleRedirect}) => {
+const Login = ({userName,password,handleLogin,handleSignup}) => {
 
      return(
        <div>
@@ -26,8 +26,8 @@ const Login = ({userName,password,handleLogin,handleRedirect}) => {
              <div className="md-grid md-cell-10">
              <Button style={{display:'inline'}} onClick={() =>handleLogin()} flat primary swapTheming>Login</Button>   
              <br/>
-             <div style="white-space:nowrap;overflow: hidden; text-overflow: ellipsis;"> <a style={{float:'right'}} href="url" onClick={() =>handleRedirect()}>New User? Click here to register</a></div>
-             
+             <div> <a style={{float:'right'}} href="registerform" onClick={() =>handleSignup()}>New User? Click here to register</a></div>
+            
             </div>
             </CardText>
        </Card>}

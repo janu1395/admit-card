@@ -11,19 +11,20 @@ class LoginPage extends Component{
   }
 
   handleOnLogin(){
-   this.props.history.push('/dashboard2');
+   this.props.history.push('/registerform');
+  }
+  handleOnSignup(){
+   this.props.history.push('/signup');
   }
 
-  handleRedirect(){
-    alert("hello");
-  }
+ 
  
   render(){
    
     return(
         <div>
-          <Login userName={this.state.userName} password={this.state.password} handleLogin={() => this.handleOnLogin()}/>
-            
+          <Login userName={this.state.userName} password={this.state.password} handleLogin={() => this.handleOnLogin()}/>  
+             {/*<Login  handleSignup={() => this.handleOnSignup()}/>  */}
         </div>
     );
 

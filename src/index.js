@@ -5,8 +5,6 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import WebFontLoader from 'webfontloader';
-import {Provider} from 'react-redux';
-import configStore from './store/configStore';
 
 WebFontLoader.load({
   google: {
@@ -14,10 +12,7 @@ WebFontLoader.load({
   },
 });
 
-const store = configStore();
 ReactDOM.render(
-  <Provider store={store}>
       <App />
-    </Provider>
 , document.getElementById('root'));
 registerServiceWorker();
